@@ -6,6 +6,7 @@ const {Client, Intents, Collection} = require('discord.js');
 
 const dbConnection = require('./config_database');
 const createSlash = require('./slashcommands');
+const keepAlive = require('./server');
 
 const client = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
 
@@ -44,5 +45,10 @@ client.on('interactionCreate', async(interaction) =>
         console.log(error);
     }
 });
+
+if(process.env.PRODUCTION == 1)
+{
+    keepAlive();
+}
 
 client.login(process.env.TOKEN);
