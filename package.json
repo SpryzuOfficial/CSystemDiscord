@@ -1,0 +1,18 @@
+{
+  "name": "csystembot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^0.3.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.8"
+  }
+}
